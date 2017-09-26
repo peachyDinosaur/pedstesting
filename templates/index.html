@@ -1,0 +1,121 @@
+<html>
+<head></head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="static/css/colors.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<body>
+	<div class="container-fluid">
+		<div class="row">
+
+			<div class="col-md-3 red">
+				<h1>LIST OF CONTAINERS</h1>
+					<h2>docker container</h2>
+				
+			</div>
+
+
+			<div class="col-md-3 blue">
+				<h1>Predict.json infomation</h1>
+					<div class="results">	
+						<!-- iterating over json values  -->
+<!-- 						{% for tag in data['predict'] %}
+						<h1> {{ tag }}</h1>
+						<ul>
+							{{ data['predict'][tag] }}
+
+						</ul>
+						{% endfor %} -->
+
+
+						<h1>Predict Label</h1>
+						<ul>{{ data['predict']['predictlabel'] }}</ul>
+
+						<h1>Predict Score</h1>
+							{% for types in data['predict']['predictscore'] %}
+							    <ul>{{ types }} {{ data['predict']['predictscore'][types] }}</ul>
+							{% endfor %}
+						
+
+
+						<h1>Predict Value</h1>
+						<uk>{{ data['predict']['predictvalue'] }}</ul>
+
+						<ul>
+						<br>
+
+
+<!-- 						{% for types in data['predict']['predictscore'] %}
+						    <li>{{ types }} {{ data['predict']['predictscore'][types] }}</li>
+						{% endfor %}
+						</ul>
+
+						<ul>
+						{% for score in scores %}
+						    <li>{{ scores[score] }}</li>
+						{% endfor %}
+						</ul> -->
+					</div>
+				
+			</div>
+
+
+			<div class="col-md-3 gray">
+				<div id= "section" onclick="showDiv();"><h1 >seoncd.json infomation</h1></div>
+					<div id = "hidden" class="results">	
+						<!-- iterating over json values in non nested -->
+						{% for tag in data2 %}
+						<h1> {{ tag }}</h1>
+						<ul>
+							{{ data2[tag] }}
+
+						</ul>
+						{% endfor %}
+
+
+					</div>
+				
+			</div>
+
+
+			<div class="col-md-3 darkblue">
+				<h1>predict.json infomation</h1>
+					<div class="results">	
+						<!-- iterating over json values via root  -->
+						{% for tag in data['predict'] %}
+						<h1> {{ tag }}</h1>
+						<ul>		
+
+						{% if data['predict'][tag] is iterable and data['predict'][tag] is not string %}
+							{% for value in  data['predict'][tag] %}
+							<li>{{ value }}</li>
+							{% endfor %}
+						{% else %}
+							<li>{{ data['predict'][tag] }}</li>
+
+						{% endif %}
+
+
+						</ul>
+						{% endfor %}
+
+
+					</div>
+				
+			</div>		
+		</div>
+	</div>
+
+
+
+
+
+
+
+	</body>
+    <script type="text/javascript">
+        function showDiv() {
+            div = document.getElementById('hidden');
+            div.style.display = "block";
+        }
+    </script>
+</html>

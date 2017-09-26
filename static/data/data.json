@@ -1,0 +1,11 @@
+{
+	"predict":{
+		"predictlabel": "label1",
+		"predictscore": {
+			"score": "72",
+			"score1": "70",
+			"score2": "50"
+		},
+		"predictvalue": "value text1"
+	}
+}

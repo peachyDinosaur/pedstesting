@@ -1,0 +1,22 @@
+ {
+    "_id": "59c7bd2b15bdf6d13b0cea5d",
+    "index": 3,
+    "guid": "c018a9ac-b93f-45aa-87df-7f1ad1e98630",
+    "isActive": false,
+    "balance": "$2,574.62",
+    "picture": "http://placehold.it/32x32",
+    "age": 35,
+    "eyeColor": "brown",
+    "name": "Flossie Velez",
+    "gender": "female",
+    "company": "EXTRAWEAR",
+    "email": "flossievelez@extrawear.com",
+    "phone": "+1 (897) 478-2462",
+    "address": "289 Varick Avenue, Brandywine, Federated States Of Micronesia, 5264",
+    "about": "Nulla eu nisi pariatur labore et nulla eiusmod duis cillum et. Id aliquip mollit adipisicing dolor sunt Lorem. Nisi consequat amet ut elit ipsum dolor velit dolore. Lorem qui ut cupidatat magna aliqua. Pariatur cupidatat ad esse quis aute velit consequat aliqua. Ea ex sit sunt in adipisicing velit aliqua cupidatat ipsum mollit mollit. Cupidatat mollit culpa laborum nulla non eu pariatur ipsum officia ullamco dolore.\r\n",
+    "registered": "2015-04-01T02:09:27 -01:00",
+    "latitude": -30.077845,
+    "longitude": 174.164729,
+    "greeting": "Hello, Flossie Velez! You have 6 unread messages.",
+    "favoriteFruit": "strawberry"
+  }

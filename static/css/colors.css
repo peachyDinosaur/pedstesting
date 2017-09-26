@@ -1,0 +1,24 @@
+.red{
+	background-color: #FF404E;
+}
+
+.blue{
+	background-color: #1BA5B8;
+	height: 500px;
+
+}
+.gray{
+	background-color: #DAECF3;
+}
+
+.darkblue{
+	background-color: #1CA5B8;
+	height: 500px;
+}
+
+#hidden{
+	display: none;
+}
+ul{
+	list-style: none;
+}
