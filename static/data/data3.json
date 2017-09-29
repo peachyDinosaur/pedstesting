@@ -1,0 +1,35 @@
+{
+	"predict":
+	[
+
+		{
+			"predictlabel": "label1",
+			"predictsocores": {
+				"score": "72"
+			},
+			"predictvalue": "value text1"
+
+
+		},
+
+				{
+			"predictlabel": "label2",
+			"predictsocores": {
+				"score": "82"
+			},
+			"predictvalue": "value text2"
+
+
+		},
+
+				{
+			"predictlabel": "label3",
+			"predictsocores": {
+				"score": "92"
+			},
+			"predictvalue": "value text3"
+
+
+		}
+	]
+}

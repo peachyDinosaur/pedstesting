@@ -17,50 +17,45 @@
 			<div class="col-md-3 blue">
 				<h1>Predict.json infomation</h1>
 					<div class="results">	
-						<!-- iterating over data object for 1st nesting  -->
-
-						{% for tag in data %}
+						<!-- iterating over json values  -->
+<!-- 						{% for tag in data['predict'] %}
 						<h1> {{ tag }}</h1>
 						<ul>
-							<!-- checking if 1st nesting iterable  -->
-							{% if data[tag] is iterable and data[tag] is not string %}
-								<!-- iterating over data object for 2nd nesting  -->
-								{% for element in data[tag] %}
-									{% if element is not string %}
-										{% for label in element %}
-											<h2>{{label}}</h2>
-											<!-- checking if 2nd nesting iterable  -->
-											{% if element[label] is iterable and element[label] is not string %}
-												<!-- iterating over data object for 3rd nesting  -->
-												{% for scores in element[label] %}
-												<li>{{scores}} {{ element[label][scores] }}</li>
-												{% endfor %}
-											{% else %}
-												<li>{{ element[label] }}</li>
-											{% endif %}
-										{% endfor %}
-									{%else%}
-										<h2>{{element}}</h2>
-										{% if data[tag][element] is iterable and data[tag][element] is not string %}
-												<!-- iterating over data object for 3rd nesting  -->
-												{% for scores in data[tag][element] %}
-												<li>{{scores}} {{ data[tag][element][scores] }}</li>
-												{% endfor %}
-											{% else %}
-												<li>{{ data[tag][element] }}</li>
-											{% endif %}
-									{%endif%}
-									<br>
-								{% endfor %}
-							{%else%}
-							<li>{{data[tag]}}</li>
-							{%endif%}
+							{{ data['predict'][tag] }}
 
 						</ul>
+						{% endfor %} -->
+
+						<h1>Predict Label</h1>
+						<ul>{{ data['predict']['predictlabel'] }}</ul>
+
+						<h1>Predict Score</h1>
+							{% for types in data['predict']['predictscore'] %}
+							    <ul>{{ types }} {{ data['predict']['predictscore'][types] }}</ul>
+							{% endfor %}
+						
+
+
+						<h1>Predict Value</h1>
+						<uk>{{ data['predict']['predictvalue'] }}</ul>
+
+						<ul>
+						<br>
+
+
+<!-- 						{% for types in data['predict']['predictscore'] %}
+						    <li>{{ types }} {{ data['predict']['predictscore'][types] }}</li>
 						{% endfor %}
+						</ul>
+
+						<ul>
+						{% for score in scores %}
+						    <li>{{ scores[score] }}</li>
+						{% endfor %}
+						</ul> -->
 
 
-
+						
 					</div>
 				
 			</div>

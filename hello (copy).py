@@ -16,14 +16,14 @@ def index():
     #print ((type(data)))
     #page = ('score:', data['predict']['predictscore']['score'])
     #print (type(page))
-    print (data3['predict'])
+    # print (data3['predict'])
     scoresData = data['predict']['predictscore']
     print (scoresData)
     return  render_template(
         'index.html',
-        data=data3,
+        data=data,
         data2=data2,
-        data3=data3,
+        # data3=data3,
         scores = scoresData)
 
 if __name__ == "__main__":
