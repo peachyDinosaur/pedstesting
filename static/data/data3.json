@@ -12,7 +12,7 @@
 
 		},
 
-				{
+		{
 			"predictlabel": "label2",
 			"predictsocores": {
 				"score": "82"
@@ -22,7 +22,7 @@
 
 		},
 
-				{
+		{
 			"predictlabel": "label3",
 			"predictsocores": {
 				"score": "92"

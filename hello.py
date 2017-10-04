@@ -1,19 +1,22 @@
 from flask import Flask, json, jsonify, render_template
+from collections import OrderedDict
 import os, json, requests
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-	#url = dockerurl
 	#resoonse = json.loads(url)
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     json_url = os.path.join(SITE_ROOT, "static/data", "data.json")
     json2_url = os.path.join(SITE_ROOT, "static/data", "second.json")
     json3_url = os.path.join(SITE_ROOT, "static/data", "data3.json")
-    data = json.load(open(json_url))
-    data2 = json.load(open(json2_url))
-    data3 = json.load(open(json3_url))
-    #print ((type(data)))
+    url = "http://10.21.183.195:6004/logisticreg/features"
+    #r = requests.get(url)
+    #json1 = r.text
+    data = json.load(open(json_url), object_pairs_hook=OrderedDict)
+    data2 = json.load(open(json2_url), object_pairs_hook=OrderedDict)
+    data3 = json.load(open(json3_url), object_pairs_hook=OrderedDict)
+    print (data)
     #page = ('score:', data['predict']['predictscore']['score'])
     #print (type(page))
     print (data3['predict'])
